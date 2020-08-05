@@ -1,0 +1,215 @@
+body{
+    margin: 0;
+    font-family: 'Source Serif Pro', serif;
+}
+/*CABEÇALHO*/
+#cabeçalho{
+    background-color: salmon;
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 10;
+}
+#logo{
+    width: 100px;
+    height: 60px; 
+    cursor: pointer;    
+    
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+}
+li{
+    float: left;
+    padding: 19px 
+}
+li a{
+    text-decoration: none;
+    color: rgba(6, 5, 8, 0.973);
+    font-size: 20px;
+    font-weight: bolder;
+}
+li a:hover{
+    color:sienna;
+}
+li:hover{
+    background-color: wheat;
+    
+}
+#menu{
+    float: right;    
+    
+    height: 60px;
+}
+#menu_vw{
+    visibility: hidden; /*MENU CRIADO APENAS PARA @MEDIA QDO MAX-WIDTH 768px. Por isso está escondido*/
+}
+
+/*CAPA*/
+#capa{
+    background: url(img/quadro_negro.jpg);
+    background-size: cover;     
+    text-align: center;
+    color: wheat;
+    text-shadow: black -5px -2px;
+    height: 70%;    
+    padding: 10px; 
+
+   
+}
+h1{
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin: 10% 20% 0 20%;
+    font-family: 'Source Serif Pro', serif;
+    
+}
+h2{
+    margin:30px 30%;
+    border-top: gainsboro 2px solid;
+    padding-top: 10px;
+    font-family: 'Source Serif Pro', serif;
+}
+h3,h4{
+    text-align: center;
+    font-size: 40px;
+    margin:0;
+    
+}
+
+#link-capa{
+    text-decoration: none;
+    color: white;
+    border: solid 1px white;
+    padding:10px;
+    border-radius: 10px;
+    text-shadow: none;
+
+}
+#link-capa:hover{
+    background-color: tomato;
+    font-size: 40px;
+}
+.fundo{
+    width: 100%;
+    background-color: wheat;
+    line-height: 2;
+    margin: 0;
+    
+}
+#principal{
+    padding-top: 60px;
+
+}
+/*FLOAT*/
+.flutuar{
+    float: left;
+    padding: 1% 0%;
+
+}
+.duas{
+    
+    width: 40%;
+    padding: 0 5%;
+    
+
+}
+.quatro{
+    width: 18%;
+    padding: 1% 3%;
+
+}
+img{
+    width: 100%;
+    padding: 0;
+}
+/*outras config*/
+
+.justificado{
+    text-align: justify;
+}
+.icone{
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    
+}
+.rodape{
+    background-color: teal;
+    width: 100%;
+    float: right;
+    
+}
+#check{
+    display: none;
+}
+/*RESPONSIVIDADE*/
+
+@media screen and (max-width: 768px){
+    .flutuar, .duas, .quatro{
+        display: block;
+        width: 80%;
+    }
+    .fundo{
+        width: 100%;
+        padding-left: 30px;
+        box-sizing: border-box;
+    }
+    
+    h1{
+       margin: 20% 5% 0;
+    }
+    h2{
+        margin:30px 10%;    
+    }
+   
+    .rodape{
+        text-align: center;
+
+    }
+    
+    /*Configurações para criação de um menu lateral retratil*/
+    #menu{
+        visibility: hidden; /*escondendo o menu original*/
+    }
+    #menu_vw{ /*editando o novo menu*/
+        visibility: visible;
+        background-color: rgb(192, 117, 104);
+        height: 700px;
+        width: 300px;
+        position: absolute;
+        transition: all .2s linear;
+        left: -300px;        
+        z-index: 11;
+    }
+    #nav-menu2{
+        width: 100%;
+        position: absolute;
+        
+    }
+    #nav-menu2 a{
+        text-decoration: none;
+    }
+    #nav-menu2 a div{
+        background-color: rgba(255, 99, 71, 0.233);
+        padding: 20px;
+        transition: all .2s linear;
+        color: wheat;
+        border-bottom: 2px solid wheat;
+    }
+    #nav-menu2 a div:hover{
+        background-color: tomato;
+    }
+
+
+    #check:checked ~ #menu_vw{
+       transform: translateX(300px);
+   }
+  
+
+}
+
